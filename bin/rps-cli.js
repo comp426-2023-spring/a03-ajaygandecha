@@ -75,6 +75,11 @@ else {
         console.log(JSON.stringify(lib.rps(playerChoice)));
     }
     else {
-        console.error("Invalid argument");
+        console.error(
+            `
+            Invalid argument.
+            Acceptable arguments: rock | paper | scissors
+            `
+        );
     }
 }

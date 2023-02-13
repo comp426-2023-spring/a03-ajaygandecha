@@ -1,0 +1,26 @@
+{
+  "name": "node-rpsls",
+  "version": "1.0.0",
+  "description": "Package to play rock-paper-scissors, for COMP 426.",
+  "main": "./lib/rpsls.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/comp426-2023-spring/a03-ajaygandecha.git"
+  },
+  "author": "ajaygandecha",
+  "license": "mit-license",
+  "bin": {
+    "node-rps": "./bin/rps-cli.js",
+    "node-rpsls": "rpsls-cli.js"
+  },
+  "bugs": {
+    "url": "https://github.com/comp426-2023-spring/a03-ajaygandecha/issues"
+  },
+  "homepage": "https://github.com/comp426-2023-spring/a03-ajaygandecha#readme",
+  "dependencies": {
+    "minimist": "^1.2.8"
+  }
+}

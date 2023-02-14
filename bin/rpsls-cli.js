@@ -1,8 +1,9 @@
 #!/usr/bin/env node
-const lib = require("../lib/rpsls");
+import rpsls from "../lib/rpsls.js";
+import minimist from "minimist";
 
 // Use minimist process command line arguments
-var args = require('minimist')(process.argv.slice(2));
+const args = minimist(process.argv.slice(2));
 
 // Handle help command
 if("h" in args || "help" in args) {
@@ -79,13 +80,13 @@ if(args._.length > 1) {
 }
 // Check if no arguments passed
 else if(args._.length === 0) {
-    console.log(JSON.stringify(lib.rpslsDefault()));
+    console.log(JSON.stringify(rpsls.rpslsDefault()));
 }
 // Check if single argument passed
 else {
     let playerChoice = args._[0].toLowerCase();
-    if(lib.rpslsChoices.includes(playerChoice)) {
-        console.log(JSON.stringify(lib.rpsls(playerChoice)));
+    if(rpsls.rpslsChoices.includes(playerChoice)) {
+        console.log(JSON.stringify(rpsls.rpsls(playerChoice)));
     }
     else {
         console.error(

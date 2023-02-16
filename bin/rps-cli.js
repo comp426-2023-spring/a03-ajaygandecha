@@ -6,7 +6,7 @@ import minimist from "minimist";
 const args = minimist(process.argv.slice(2));
 
 // Handle help command
-if("h" in args || "help" in args) {
+if ("h" in args || "help" in args) {
     console.log(
         `
         Usage: node-rps [SHOT]
@@ -26,7 +26,7 @@ if("h" in args || "help" in args) {
 }
 
 // Handle rules command
-if("r" in args || "rules" in args) {
+if ("r" in args || "rules" in args) {
     console.log(
         `
         Rules for Rock Paper Scissors:
@@ -40,7 +40,7 @@ if("r" in args || "rules" in args) {
 }
 
 // Check if arguments out of range
-if(args._.length > 1) {
+if (args._.length > 1) {
     console.error("Arguments out of range.");
     console.log(
         `
@@ -66,13 +66,13 @@ if(args._.length > 1) {
     process.exit(0);
 }
 // Check if no arguments passed
-else if(args._.length === 0) {
+else if (args._.length === 0) {
     console.log(JSON.stringify(rpsls.rpsDefault()));
 }
 // Check if single argument passed
 else {
     let playerChoice = args._[0].toLowerCase();
-    if(rpsls.rpsChoices.includes(playerChoice)) {
+    if (rpsls.rpsChoices.includes(playerChoice)) {
         console.log(JSON.stringify(rpsls.rps(playerChoice)));
     }
     else {

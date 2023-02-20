@@ -8,19 +8,19 @@ const args = minimist(process.argv.slice(2));
 // Handle help command
 if ("h" in args || "help" in args) {
     console.log(
-        `
-        Usage: node-rps [SHOT]
-        Play Rock Paper Scissors (RPS)
+`
+Usage: node-rps [SHOT]
+Play Rock Paper Scissors (RPS)
 
-        -h, --help      display this help message and exit
-        -r, --rules     display the rules and exit
+-h, --help      display this help message and exit
+-r, --rules     display the rules and exit
 
-        Examples:
-        node-rps        Return JSON with single player RPS result.
-                        e.g. {"player":"rock"}
-        node-rps rock   Return JSON with results for RPS played against a simulated opponent.
-                        e.g {"player":"rock","opponent":"scissors","result":"win"}
-        `
+Examples:
+node-rps        Return JSON with single player RPS result.
+                e.g. {"player":"rock"}
+node-rps rock   Return JSON with results for RPS played against a simulated opponent.
+                e.g {"player":"rock","opponent":"scissors","result":"win"}
+`
     );
     process.exit(0);
 }
@@ -28,13 +28,13 @@ if ("h" in args || "help" in args) {
 // Handle rules command
 if ("r" in args || "rules" in args) {
     console.log(
-        `
-        Rules for Rock Paper Scissors:
+`
+Rules for Rock Paper Scissors:
 
-        - Scissors CUTS Paper
-        - Paper COVERS Rock
-        - Rock CRUSHES Scissors
-        `
+- Scissors CUTS Paper
+- Paper COVERS Rock
+- Rock CRUSHES Scissors
+`
     );
     process.exit(0);
 }
@@ -43,25 +43,25 @@ if ("r" in args || "rules" in args) {
 if (args._.length > 1) {
     console.error("Arguments out of range.");
     console.log(
-        `
-        Usage: node-rps [SHOT]
-        Play Rock Paper Scissors (RPS)
-        
-          -h, --help      display this help message and exit
-          -r, --rules     display the rules and exit
-        
-        Examples:
-          node-rps        Return JSON with single player RPS result.
-                          e.g. {"player":"rock"}
-          node-rps rock   Return JSON with results for RPS played against a simulated opponent.
-                          e.g {"player":"rock","opponent":"scissors","result":"win"}
+`
+Usage: node-rps [SHOT]
+Play Rock Paper Scissors (RPS)
 
-        Rules for Rock Paper Scissors:
+    -h, --help      display this help message and exit
+    -r, --rules     display the rules and exit
 
-        - Scissors CUTS Paper
-        - Paper COVERS Rock
-        - Rock CRUSHES Scissors          
-        `
+Examples:
+    node-rps        Return JSON with single player RPS result.
+                    e.g. {"player":"rock"}
+    node-rps rock   Return JSON with results for RPS played against a simulated opponent.
+                    e.g {"player":"rock","opponent":"scissors","result":"win"}
+
+Rules for Rock Paper Scissors:
+
+- Scissors CUTS Paper
+- Paper COVERS Rock
+- Rock CRUSHES Scissors          
+`
     );
     process.exit(0);
 }
@@ -77,20 +77,18 @@ else {
     }
     else {
         console.error(
-            `
-            Invalid argument.
-            Acceptable arguments: rock | paper | scissors
-            `
+`
+Invalid argument.
+Acceptable arguments: rock | paper | scissors
+`
         );
         console.log(
-            `
-            
-            Rules for Rock Paper Scissors:
-    
-            - Scissors CUTS Paper
-            - Paper COVERS Rock
-            - Rock CRUSHES Scissors          
-            `
+`Rules for Rock Paper Scissors:
+
+- Scissors CUTS Paper
+- Paper COVERS Rock
+- Rock CRUSHES Scissors          
+`
         );
     }
 }
